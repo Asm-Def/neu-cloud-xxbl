@@ -57,3 +57,7 @@ resp = sess.post(url5+"?t={}".format(int(time.time())), data=json.dumps(data), h
 
 if resp.status_code == 200 and json.loads(resp.text)['success'] == True:
     print('Success')
+else:
+    print(resp.status_code)
+    print(resp.text)
+
